@@ -1,0 +1,525 @@
+/* ===============================
+   Google Font
+=================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(-45deg,#020617,#0f172a,#111827,#1e293b);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===============================
+   Navbar
+=================================*/
+
+.glass-nav{
+    background:rgba(15,23,42,.65);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    transition:.4s;
+}
+
+.navbar-brand{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.nav-link{
+    color:#fff !important;
+    margin-left:15px;
+    position:relative;
+}
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-4px;
+    background:#00e5ff;
+    transition:.4s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+    width:100%;
+}
+
+/* ===============================
+   Hero
+=================================*/
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:80px;
+}
+
+.hero h1{
+    background:linear-gradient(90deg,#00e5ff,#4facfe,#9d4edd);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h3{
+    min-height:40px;
+    color:#00d4ff;
+}
+
+.hero p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+/* ===============================
+   Profile Image
+=================================*/
+
+.profile-wrapper{
+
+    position:relative;
+
+    width:380px;
+    height:380px;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.profile-img{
+
+    width:300px;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    position:relative;
+
+    z-index:5;
+
+    box-shadow:
+    0 0 35px #00e5ff;
+
+}
+
+
+/* ===============================
+   Rings
+=================================*/
+
+.ring{
+
+position:absolute;
+
+border-radius:50%;
+
+border:2px solid #00d9ff;
+
+box-shadow:
+0 0 20px cyan;
+
+}
+
+.ring1{
+
+width:280px;
+height:280px;
+
+animation:rotate1 10s linear infinite;
+
+}
+
+.ring2{
+
+width:330px;
+height:330px;
+
+border-style:dashed;
+
+animation:rotate2 16s linear infinite;
+
+}
+
+.ring3{
+
+width:380px;
+height:380px;
+
+border-color:#8a2be2;
+
+box-shadow:
+0 0 25px #9d4edd;
+
+animation:rotate3 24s linear infinite;
+
+}
+
+@keyframes rotate1{
+
+from{
+transform:rotate(0);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes rotate2{
+
+from{
+transform:rotate(360deg);
+}
+
+to{
+transform:rotate(0);
+}
+
+}
+
+@keyframes rotate3{
+
+from{
+transform:rotate(0);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+/* ===============================
+   Section Titles
+=================================*/
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+font-size:40px;
+
+font-weight:bold;
+
+position:relative;
+
+}
+
+.section-title::after{
+
+content:'';
+
+width:90px;
+
+height:4px;
+
+background:#00d4ff;
+
+display:block;
+
+margin:auto;
+
+margin-top:12px;
+
+border-radius:10px;
+
+}
+
+/* ===============================
+   Cards
+=================================*/
+
+.glass-card,
+.edu-card,
+.project-card{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(15px);
+
+border:none;
+
+border-radius:20px;
+
+color:white;
+
+transition:.4s;
+
+overflow:hidden;
+
+}
+
+.glass-card:hover,
+.edu-card:hover,
+.project-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 20px 40px rgba(0,229,255,.25);
+
+}
+
+/* ===============================
+   Project Image
+=================================*/
+
+.project-card img{
+
+height:220px;
+
+object-fit:cover;
+
+transition:.4s;
+
+}
+
+.project-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* ===============================
+   Progress Bars
+=================================*/
+
+.progress{
+
+height:12px;
+
+background:#334155;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+.progress-bar{
+
+font-weight:bold;
+
+}
+
+/* ===============================
+   Buttons
+=================================*/
+
+.btn-info{
+
+background:#00d4ff;
+
+border:none;
+
+}
+
+.btn-info:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 20px cyan;
+
+}
+
+/* ===============================
+   Contact
+=================================*/
+
+.form-control{
+
+background:#1e293b;
+
+border:none;
+
+color:white;
+
+}
+
+.form-control:focus{
+
+background:#1e293b;
+
+color:white;
+
+box-shadow:0 0 15px cyan;
+
+}
+.form-control::placeholder{
+    color: #cbd5e1;
+    opacity: 1;
+}
+
+.contact-links{
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+/* ===============================
+   Footer
+=================================*/
+
+footer{
+
+background:#020617;
+
+margin-top:80px;
+
+}
+
+/* ===============================
+   Back To Top
+=================================*/
+
+#topBtn{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00d4ff;
+
+color:black;
+
+display:none;
+
+cursor:pointer;
+
+font-size:22px;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#topBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ===============================
+   Scrollbar
+=================================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00d4ff;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0f172a;
+
+}
+
+/* ===============================
+   Responsive
+=================================*/
+
+@media(max-width:991px){
+
+#typing{
+    font-size: 0.8em;
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.profile-wrapper{
+
+width:300px;
+
+height:300px;
+
+margin-top:50px;
+
+}
+
+.profile-img{
+
+width:250px;
+
+height:250px;
+
+}
+
+.ring1{
+
+width:230px;
+height:230px;
+
+}
+
+.ring2{
+
+width:270px;
+height:270px;
+
+}
+
+.ring3{
+
+width:310px;
+height:310px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+}
